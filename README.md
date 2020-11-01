@@ -27,16 +27,16 @@ yarn install
 **Start the server**
 
 ```sh
-npm run build
+npm run dev
 ```
 
 or
 
 ```sh
-yarn build
+yarn dev
 ```
 
-You're now ready to run any of the scripts below, which will start react-automation-profiler.
+You're now ready to run any of the scripts below, which will start react-automation-profiler for the example app`.
 
 ## Example Scripts
 
@@ -51,3 +51,11 @@ Runs `react-automation-profiler` with the only required argument, `page`. Sets `
 With only the `page` argument, react-automation-profiler will run through the automation flows only once, open up the charts page in the browser, and then exit.
 
 To get react-automation-profiler to not exit and instead watch for changes and create new versions of charts in the process, see `watch`.
+
+```sh
+npx rap --page=http://localhost:1235/index.html --averageOf=10
+```
+
+Runs each automation flow a set number of times (10 in this case), and averages out the metrics for these runs. Because the timings of each automation run will be different, generating averaged metrics can help produce more accuracy in determining the timings for a given automation flow.
+
+`averageOf` can be any number, but be aware that the higher this numbers is, the slower react-automation-profiler will be in generating charts.
