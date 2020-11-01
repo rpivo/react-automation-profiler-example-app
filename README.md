@@ -9,3 +9,17 @@ Clone this repository (SSH example below)
 ```sh
 git clone --depth 1 git@github.com:rpivo/react-automation-profiler-example-app.git
 ```
+
+Install dependencies
+
+```sh
+cd react-automation-profiler-example-app
+npm install
+```
+
+or
+
+```sh
+cd react-automation-profiler-example-app
+yarn install
+```
