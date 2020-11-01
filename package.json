@@ -1,6 +1,6 @@
 {
   "name": "react-automation-profiler-example-app",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "an example app that shows how react-automation-profiler can be used to auto-profile an app",
   "main": "index.js",
   "scripts": {
@@ -11,7 +11,14 @@
     "type": "git",
     "url": "git+https://github.com/rpivo/react-automation-profiler-example-app.git"
   },
-  "keywords": [],
+  "type": "module",
+  "keywords": [
+    "react",
+    "automation",
+    "profiler",
+    "puppeteer",
+    "d3"
+  ],
   "author": "",
   "license": "ISC",
   "bugs": {
@@ -23,6 +30,7 @@
     "react-dom": "^17.0.1"
   },
   "devDependencies": {
+    "@rollup/plugin-commonjs": "^16.0.0",
     "@rollup/plugin-node-resolve": "^10.0.0",
     "@rollup/plugin-typescript": "^6.1.0",
     "@types/react": "^16.9.55",
