@@ -38,4 +38,16 @@ yarn build
 
 You're now ready to run any of the scripts below, which will start react-automation-profiler.
 
-## Scripts
+## Example Scripts
+
+To see some of react-automation-profiler's functionality, run through these scripts.
+
+```sh
+npx rap --page=http://localhost:1235/index.html
+```
+
+Runs `react-automation-profiler` with the only required argument, `page`. Sets `page` to the index file where your local development server is running (which is  served from port `1235` for the demo app).
+
+With only the `page` argument, react-automation-profiler will run through the automation flows only once, open up the charts page in the browser, and then exit.
+
+To get react-automation-profiler to not exit and instead watch for changes and create new versions of charts in the process, see `watch`.
