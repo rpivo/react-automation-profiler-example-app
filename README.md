@@ -23,3 +23,15 @@ or
 cd react-automation-profiler-example-app
 yarn install
 ```
+
+Start the server
+
+```sh
+npm run build
+```
+
+or
+
+```sh
+yarn build
+```
