@@ -1,10 +1,10 @@
 {
   "name": "react-automation-profiler-example-app",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "an example app that shows how react-automation-profiler can be used to auto-profile an app",
   "main": "index.js",
   "scripts": {
-    "build": "",
+    "dev": "rm -rf dist && mkdir dist && rollup -c",
     "update": "npx npm-check-updates -u"
   },
   "repository": {
