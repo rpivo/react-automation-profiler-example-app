@@ -1,0 +1,11 @@
+# react-automation-profiler Example App
+
+Analyze your React app's renders with automated user flows that generate comparison charts. Run flows before and after major changes to see how it affects components and renders, or run them on every build.
+
+## To Demo
+
+Clone this repository (SSH example below)
+
+```sh
+git clone --depth 1 git@github.com:rpivo/react-automation-profiler-example-app.git
+```
