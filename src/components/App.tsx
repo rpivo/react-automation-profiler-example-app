@@ -1,5 +1,15 @@
 import React from 'react';
+import ProblemChild from './ProblemChild';
 
-const App = () => <div>React Automation Profiler Example App</div>;
+import { AutomationProfiler } from 'react-automation-profiler';
 
-export default App;
+export default function() {
+  return (
+    <AutomationProfiler id='p-app'>
+      <div id='app'>
+        <ProblemChild />
+        <button>Click Me.</button>
+      </div>
+    </AutomationProfiler>
+  );
+}
