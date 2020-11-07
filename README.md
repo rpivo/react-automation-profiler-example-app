@@ -36,14 +36,14 @@ or
 yarn dev
 ```
 
-You're now ready to run any of the scripts below, which will start react-automation-profiler for the example app`.
+You're now ready to run any of the scripts below, which will start react-automation-profiler for the example app.
 
 ## Example Scripts
 
 To see some of react-automation-profiler's functionality, run through these scripts.
 
 ```sh
-npx rap --page=http://localhost:1235/index.html
+npx rap --page=http://localhost:1000/index.html
 ```
 
 Runs `react-automation-profiler` with the only required argument, `page`. Sets `page` to the index file where your local development server is running (which is  served from port `1235` for the demo app).
@@ -53,7 +53,7 @@ With only the `page` argument, react-automation-profiler will run through the au
 To get react-automation-profiler to not exit and instead watch for changes and create new versions of charts in the process, see `watch`.
 
 ```sh
-npx rap --page=http://localhost:1235/index.html --averageOf=10
+npx rap --page=http://localhost:1000/index.html --averageOf=10
 ```
 
 Runs each automation flow a set number of times (10 in this case), and averages out the metrics for these runs. Because the timings of each automation run will be different, generating averaged metrics can help produce more accuracy in determining the timings for a given automation flow.
