@@ -49,7 +49,7 @@ To see some of react-automation-profiler's functionality, try these example scri
 - [Running the Automation Flows in Watch Mode](#Running-the-Automation-Flows-in-Watch-Mode)
 - [Running the Automation Flows Only After a Certain Number of Changes](#Running-the-Automation-Flows-Only-After-a-Certain-Number-of-Changes)
 - [Generating Averages by Running Through Each Automation Flow a Certain Number of Times](#Generating-Averages-by-Running-Through-Each-Automation-Flow-a-Certain-Number-of-Times)
-- [Include the Mounting Phase for the Profiled Component](#Include-the-Mounting-Phase-for-the-Profiled-Component)
+- [Including the Mount Phase for the Profiled Component](#Including-the-Mount-Phase-for-the-Profiled-Component)
 - [Running the Automation Flows Only Once](#Running-the-Automation-Flows-Only-Once)
 
 ### Running the Automation Flows in Watch Mode
@@ -86,7 +86,7 @@ The above command will run through the full automation suite 10 times and then c
 
 `--averageOf` can be any number, but be aware that react-automation-profiler will run slower as this number increases.
 
-### Include the Mounting Phase for the Profiled Component
+### Including the Mount Phase for the Profiled Component
 
 Use `--includeMount` to include the mounting phase of the profiled component:
 
