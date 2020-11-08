@@ -42,6 +42,12 @@ You're now ready to run any of the scripts below, which will start react-automat
 
 To see some of react-automation-profiler's functionality, try these example scripts at the root of this repo.
 
+- [RuRunning the Automation Flows in Watch Modenn](#Running-the-Automation-Flows-in-Watch-Mode)
+- [Running the Automation Flows in Watch Mode Only After a Certain Number of Changes](#Running-the-Automation-Flows-in-Watch-Mode-Only-After-a-Certain-Number-of-Changes)
+- [Generating Averages by Running Through Each Automation Flow a Certain Number of Times](#Generating-Averages-by-Running-Through-Each-Automation-Flow-a-Certain-Number-of-Times)
+- [Include the Mounting Phase for the Profiled Component](#Include-the-Mounting-Phase-for-the-Profiled-Component)
+- [Running the Automation Flows Only Once](#Running-the-Automation-Flows-Only-Once)
+
 ### Running the Automation Flows in Watch Mode
 
 ```sh
