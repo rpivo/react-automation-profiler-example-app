@@ -43,7 +43,7 @@ You're now ready to run any of the scripts below, which will start react-automat
 To see some of react-automation-profiler's functionality, try these example scripts at the root of this repo.
 
 - [Running the Automation Flows in Watch Mode](#Running-the-Automation-Flows-in-Watch-Mode)
-- [Running the Automation Flows in Watch Mode Only After a Certain Number of Changes](#Running-the-Automation-Flows-in-Watch-Mode-Only-After-a-Certain-Number-of-Changes)
+- [Running the Automation Flows Only After a Certain Number of Changes](#Running-the-Automation-Flows-Only-After-a-Certain-Number-of-Changes)
 - [Generating Averages by Running Through Each Automation Flow a Certain Number of Times](#Generating-Averages-by-Running-Through-Each-Automation-Flow-a-Certain-Number-of-Times)
 - [Include the Mounting Phase for the Profiled Component](#Include-the-Mounting-Phase-for-the-Profiled-Component)
 - [Running the Automation Flows Only Once](#Running-the-Automation-Flows-Only-Once)
@@ -60,7 +60,7 @@ Watch mode is set at a 10-second delay. react-automation-profiler will not rerun
 
 To get Watch mode to rerun only after a certain number of changes are made, see the `--changeInterval` example.
 
-### Running the Automation Flows in Watch Mode Only After a Certain Number of Changes
+### Running the Automation Flows Only After a Certain Number of Changes
 
 Because a small change to your codebase will likely not create much difference in React renders, you can use the `--changeInterval` argument to only rerun react-automation-profiler after a certain number of changes have occurred in the watch folder:
 
