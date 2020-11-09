@@ -4,6 +4,8 @@ Analyze your React app's renders with automated user flows that generate compari
 
 This example app uses some repurposed code provided by [Kent Dodds'](https://twitter.com/kentcdodds) article [When to useMemo and useCallback](https://kentcdodds.com/blog/usememo-and-usecallback). The code illustrates use cases for certain React memoization techniques and has been slightly rewritten here to show use cases for react-automation-profiler.
 
+While testing the app, try replacing some of the code inside **App.tsx** with some of the provided commented-out code (see comments within the file). Using `React.memo()` and `React.useCallback()` with both of the button components will result in the least number of renders.
+
 ### Contents
 - [To Demo](#To-Demo)
 - [Example Scripts](#Example-Scripts)
@@ -115,10 +117,11 @@ To get react-automation-profiler watch for changes and create new versions of ch
 
 ## Reading the Results
 
-When running the command `npx rap --page=http://localhost:1000/index.html --watch=dist`, two charts will display on the automation flow page: *Click Memoized Button Five Times* and *Click Non Memoized Button Five Times*. Some things to note from these charts:
+When running any of the commands above, two charts will display on the automation flow page: *Click Memoized Button Five Times* and *Click Non Memoized Button Five Times*. Some things to note from these charts:
 - In this scenario, the use of `React.memo()` and `React.useCallback()` helps prevent the memoized button from rendering when it doesn't need to.
 - The *Memoized Button* chart will have more renders than the *Non Memoized* chart because, when the memoized button is clicked, the non-memoized button also has to render since it receives props and is not memoized.
 - When the non-memoized button is clicked, the memoized button doesn't render, which results in the non-memoized button click flow having fewer renders.
 - The memoized button renders will have a noticeably lower Actual Duration after its first render because the component is memoized at that point.
 - The first `p-app` render in the *Non Memoized* flow will likely be the most expensive render in the two flows. This render will precede any memoization that will occur when either of the buttons are clicked.
-- If you move the `Click Memoized Button Five Times` flow in the **react.automation.yaml** file so that it occurs before the `Click Non Memoized Button Five Times`, then the *Memoized* flow will have this unmemoized `p-app` render since it occurs first (note that the automation flows happen one after the other as they are listed in the **react.automation.yaml** file).
+- If you move the `Click Memoized Button Five Times` flow in the **react.automation.yaml** file so that it occurs before the `Click Non Memoized Button Five Times` flow, then the *Memoized* flow will have this unmemoized `p-app` render since it occurs first (note that the automation flows happen one after the other as they are listed in the **react.automation.yaml** file).
+- This small example likely won't impact the Total Automation Time for each flow, but lowering render times (or preventing them altogether) in a much larger app could have a more profound effect.
