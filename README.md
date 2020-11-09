@@ -2,11 +2,12 @@
 
 Analyze your React app's renders with automated user flows that generate comparison charts. Run flows before and after major changes to see how it affects components and renders, or run them on every build.
 
-This example app uses some repurposed code provided by [Kent Dodds'](https://twitter.com/kentcdodds) article [When to useMemo and useCallback](https://kentcdodds.com/blog/usememo-and-usecallback). The code illustrates use cases for certain React memoization techniques and has been slightly rewritten here to illustrate use cases for react-automation-profiler.
+This example app uses some repurposed code provided by [Kent Dodds'](https://twitter.com/kentcdodds) article [When to useMemo and useCallback](https://kentcdodds.com/blog/usememo-and-usecallback). The code illustrates use cases for certain React memoization techniques and has been slightly rewritten here to show use cases for react-automation-profiler.
 
 ### Contents
 - [To Demo](#To-Demo)
 - [Example Scripts](#Example-Scripts)
+- [Reading the Results](#Reading-the-Results)
 
 ## To Demo
 
@@ -47,18 +48,6 @@ You're now ready to run any of the scripts below, which will start react-automat
 ## Example Scripts
 
 To see some of react-automation-profiler's functionality, try these example scripts at the root of this repo.
-
-### Reading the Results
-
-When running the command `npx rap --page=http://localhost:1000/index.html --watch=dist`, two charts will display on the automation flow page: *Click Memoized Button Five Times* and *Click Non Memoized Button Five Times*. Some things to note from these charts:
-- The *Memoized Button* chart will have more renders than the *Non Memoized* chart because, when the memoized button is clicked, the non-memoized button also has to render since it receives props and is not memoized. When the non-memoized button is clicked, the memoized button doesn't render, which results in the non-memoized button click flow having fewer renders. Using both `React.memo()` and `React.useCallback()` helps prevent the memoized button from rendering when it doesn't need to.
-- The memoized button renders will have a noticeably lower Actual Duration after its first render because the component is memoized after the first render.
-
-- [Running the Automation Flows in Watch Mode](#Running-the-Automation-Flows-in-Watch-Mode)
-- [Running the Automation Flows Only After a Certain Number of Changes](#Running-the-Automation-Flows-Only-After-a-Certain-Number-of-Changes)
-- [Generating Averages by Running Through Each Automation Flow a Certain Number of Times](#Generating-Averages-by-Running-Through-Each-Automation-Flow-a-Certain-Number-of-Times)
-- [Including the Mount Phase for the Profiled Component](#Including-the-Mount-Phase-for-the-Profiled-Component)
-- [Running the Automation Flows Only Once](#Running-the-Automation-Flows-Only-Once)
 
 ### Running the Automation Flows in Watch Mode
 
@@ -117,3 +106,15 @@ This will run `react-automation-profiler` with the only required argument, `page
 With only the `page` argument, react-automation-profiler will run through the automation flows only once and open up the profiler charts in a new browser tab. The process will continue in the terminal, allowing you to export the data from the charts if you want. Note that killing the process will disable exporting.
 
 To get react-automation-profiler watch for changes and create new versions of charts in the process, see `watch`.
+
+## Reading the Results
+
+When running the command `npx rap --page=http://localhost:1000/index.html --watch=dist`, two charts will display on the automation flow page: *Click Memoized Button Five Times* and *Click Non Memoized Button Five Times*. Some things to note from these charts:
+- The *Memoized Button* chart will have more renders than the *Non Memoized* chart because, when the memoized button is clicked, the non-memoized button also has to render since it receives props and is not memoized. When the non-memoized button is clicked, the memoized button doesn't render, which results in the non-memoized button click flow having fewer renders. Using both `React.memo()` and `React.useCallback()` helps prevent the memoized button from rendering when it doesn't need to.
+- The memoized button renders will have a noticeably lower Actual Duration after its first render because the component is memoized after the first render.
+
+- [Running the Automation Flows in Watch Mode](#Running-the-Automation-Flows-in-Watch-Mode)
+- [Running the Automation Flows Only After a Certain Number of Changes](#Running-the-Automation-Flows-Only-After-a-Certain-Number-of-Changes)
+- [Generating Averages by Running Through Each Automation Flow a Certain Number of Times](#Generating-Averages-by-Running-Through-Each-Automation-Flow-a-Certain-Number-of-Times)
+- [Including the Mount Phase for the Profiled Component](#Including-the-Mount-Phase-for-the-Profiled-Component)
+- [Running the Automation Flows Only Once](#Running-the-Automation-Flows-Only-Once)
