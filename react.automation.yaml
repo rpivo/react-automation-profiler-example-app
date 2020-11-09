@@ -1,2 +1,12 @@
-Click Button:
+Click Non Memoized Button Five Times:
 - click button#button
+- click button#button
+- click button#button
+- click button#button
+- click button#button
+Click Memoized Button Five Times:
+- click button#memoized-button
+- click button#memoized-button
+- click button#memoized-button
+- click button#memoized-button
+- click button#memoized-button
