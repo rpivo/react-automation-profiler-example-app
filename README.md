@@ -49,6 +49,12 @@ You're now ready to run any of the scripts below, which will start react-automat
 
 To see some of react-automation-profiler's functionality, try these example scripts at the root of this repo.
 
+- [Running the Automation Flows in Watch Mode](#Running-the-Automation-Flows-in-Watch-Mode)
+- [Running the Automation Flows Only After a Certain Number of Changes](#Running-the-Automation-Flows-Only-After-a-Certain-Number-of-Changes)
+- [Generating Averages by Running Through Each Automation Flow a Certain Number of Times](#Generating-Averages-by-Running-Through-Each-Automation-Flow-a-Certain-Number-of-Times)
+- [Including the Mount Phase for the Profiled Component](#Including-the-Mount-Phase-for-the-Profiled-Component)
+- [Running the Automation Flows Only Once](#Running-the-Automation-Flows-Only-Once)
+
 ### Running the Automation Flows in Watch Mode
 
 ```sh
@@ -112,9 +118,3 @@ To get react-automation-profiler watch for changes and create new versions of ch
 When running the command `npx rap --page=http://localhost:1000/index.html --watch=dist`, two charts will display on the automation flow page: *Click Memoized Button Five Times* and *Click Non Memoized Button Five Times*. Some things to note from these charts:
 - The *Memoized Button* chart will have more renders than the *Non Memoized* chart because, when the memoized button is clicked, the non-memoized button also has to render since it receives props and is not memoized. When the non-memoized button is clicked, the memoized button doesn't render, which results in the non-memoized button click flow having fewer renders. Using both `React.memo()` and `React.useCallback()` helps prevent the memoized button from rendering when it doesn't need to.
 - The memoized button renders will have a noticeably lower Actual Duration after its first render because the component is memoized after the first render.
-
-- [Running the Automation Flows in Watch Mode](#Running-the-Automation-Flows-in-Watch-Mode)
-- [Running the Automation Flows Only After a Certain Number of Changes](#Running-the-Automation-Flows-Only-After-a-Certain-Number-of-Changes)
-- [Generating Averages by Running Through Each Automation Flow a Certain Number of Times](#Generating-Averages-by-Running-Through-Each-Automation-Flow-a-Certain-Number-of-Times)
-- [Including the Mount Phase for the Profiled Component](#Including-the-Mount-Phase-for-the-Profiled-Component)
-- [Running the Automation Flows Only Once](#Running-the-Automation-Flows-Only-Once)
