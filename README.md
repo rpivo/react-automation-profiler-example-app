@@ -10,6 +10,8 @@ While testing the app, try replacing some of the code inside **App.tsx** with th
 
 This example contains two button components. One uses `React.memo()` and `React.useCallback()`, and the other does not. Each of these buttons is contained within a parent `DualCounter` component that passes down state to both of the buttons.
 
+react-automation-profiler `<AutomationProfiler />` component wraps each of the buttons as well as the root `<App />` component (three instances of `<AutomationProfiler />`).
+
 ### Contents
 - [To Demo](#To-Demo)
 - [Example Scripts](#Example-Scripts)
