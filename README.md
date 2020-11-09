@@ -8,6 +8,8 @@ This example app uses some repurposed code provided by [Kent Dodds'](https://twi
 
 While testing the app, try replacing some of the code inside **App.tsx** with the commented-out code (see comments within the file). Using `React.memo()` and `React.useCallback()` with both of the button components will result in the least number of renders.
 
+This example contains two button components. One uses `React.memo()` and `React.useCallback()`, and the other does not. Each of these buttons is contained within a parent `DualCounter` component that passes down state to both of the buttons.
+
 ### Contents
 - [To Demo](#To-Demo)
 - [Example Scripts](#Example-Scripts)
