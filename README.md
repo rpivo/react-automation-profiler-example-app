@@ -2,6 +2,8 @@
 
 Analyze your React app's renders with automated user flows that generate comparison charts. Run flows before and after major changes to see how it affects components and renders, or run them on every build.
 
+### About This Example App
+
 This example app uses some repurposed code provided by [Kent Dodds'](https://twitter.com/kentcdodds) article [When to useMemo and useCallback](https://kentcdodds.com/blog/usememo-and-usecallback). The code illustrates use cases for certain React memoization techniques and has been slightly rewritten here to show use cases for react-automation-profiler.
 
 While testing the app, try replacing some of the code inside **App.tsx** with some of the provided commented-out code (see comments within the file). Using `React.memo()` and `React.useCallback()` with both of the button components will result in the least number of renders.
