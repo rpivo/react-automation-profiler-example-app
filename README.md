@@ -1,5 +1,7 @@
 # react-automation-profiler Example App
 
+⚠️ react-automation-profile Example App requires  Node v14 (current LTS) or above.
+
 Analyze your React app's renders with automated user flows that generate comparison charts. Run flows before and after major changes to see how it affects components and renders, or run them on every build.
 
 ### About This Example App
@@ -51,7 +53,7 @@ or
 yarn dev
 ```
 
-You're now ready to run any of the scripts below, which will start react-automation-profiler for the example app.
+You're now ready to run any of the scripts below in a separate terminal window, which will start react-automation-profiler for the example app.
 
 ## Example Scripts
 
