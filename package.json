@@ -1,6 +1,6 @@
 {
   "name": "react-automation-profiler-example-app",
-  "version": "0.0.7",
+  "version": "0.0.8",
   "description": "an example app that shows how react-automation-profiler can be used to auto-profile an app",
   "main": "index.js",
   "scripts": {
