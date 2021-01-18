@@ -1,6 +1,6 @@
 {
   "name": "react-automation-profiler-example-app",
-  "version": "0.0.10",
+  "version": "0.0.11",
   "description": "an example app that shows how react-automation-profiler can be used to auto-profile an app",
   "main": "index.js",
   "scripts": {
@@ -36,7 +36,7 @@
     "@rollup/plugin-typescript": "^6.1.0",
     "@types/react": "^16.9.56",
     "@types/react-dom": "^16.9.9",
-    "express-compression-server": "^1.1.0",
+    "express-compression-server": "^1.2.1",
     "nodemon": "^2.0.7",
     "react-automation-profiler": "^0.8.4",
     "rollup": "^2.33.1",
